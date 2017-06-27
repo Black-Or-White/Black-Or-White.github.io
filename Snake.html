@@ -68,9 +68,6 @@ var interval = null;
  
 CANVAS.width = MAXWIDTH;CANVAS.height = MAXHEIGHT;
 
-document.getElementById("newGameButton").click(function(){
- newgame();
-});
 function newgame(){
  SNAKE = []; //用队列模拟蛇身
  DIR = "right"; //用来控制蛇头的方向
