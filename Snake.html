@@ -66,8 +66,7 @@ var TIME = 400;  //蛇的速度
 var SCORE = 0;  //计算玩家分数
 var interval = null;
  
-CANVAS.width = MAXWIDTH;
-CANVAS.height = MAXHEIGHT;
+CANVAS.width = MAXWIDTH;CANVAS.height = MAXHEIGHT;
 
 document.getElementById("newGameButton").click(function(){
  newgame();
@@ -99,7 +98,7 @@ function move(){
  }
  if(HEADX>MAXWIDTH-SIZE || HEADY>MAXHEIGHT-SIZE || HEADX<0 || HEADY<0){
  alert("你的分数为："+SCORE+"分，继续努力吧!失败原因：碰壁了.....");
-
+ window.location.reload();
  }
  for(var i=1;i<SNAKE.length;i++){
  if(SNAKE[i][0] == SNAKE[0][0] && SNAKE[i][1] == SNAKE[0][1]){
