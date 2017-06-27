@@ -9,21 +9,23 @@
  width: 100%;
  text-align: center;
 }
-canvas{
- display:block; 
+canvas{ 
  border:5px solid black;
  margin:4px auto;
 }
+  #container{
+  }
  </style>
 </head>
 <body>
 <div class="title"><h1>贪吃蛇小游戏</h1></div>
 <div class="title"><a href="javascript:newgame();" id="newGameButton">New Game</a></div>
 <div class="title">score:<span id="score">0</span></div>
-
+<div id="container">
 <canvas id="canvas">
  Your browser doesn't support the <code>canvas</code> element.
 </canvas>
+ </div>
 <script>
 var CANVAS = document.getElementById("canvas");
 var CTX = CANVAS.getContext("2d");
