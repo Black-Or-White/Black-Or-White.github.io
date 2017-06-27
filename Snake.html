@@ -51,7 +51,7 @@ canvas{
  Your browser doesn't support the <code>canvas</code> element.
  </canvas>
  <script>
- var CANVAS = document.getElementById("canvas");
+var CANVAS = document.getElementById("canvas");
 var CTX = CANVAS.getContext("2d");
 var SNAKE = new Array(); //用队列模拟蛇身
 var DIR = "right";  //用来控制蛇头的方向
@@ -68,10 +68,7 @@ var interval = null;
  
 CANVAS.width = MAXWIDTH;
 CANVAS.height = MAXHEIGHT;
- 
-window.onload = function(){
- newgame();
-};
+
 document.getElementById("newGameButton").click(function(){
  newgame();
 });
@@ -102,7 +99,7 @@ function move(){
  }
  if(HEADX>MAXWIDTH-SIZE || HEADY>MAXHEIGHT-SIZE || HEADX<0 || HEADY<0){
  alert("你的分数为："+SCORE+"分，继续努力吧!失败原因：碰壁了.....");
- window.location.reload();
+
  }
  for(var i=1;i<SNAKE.length;i++){
  if(SNAKE[i][0] == SNAKE[0][0] && SNAKE[i][1] == SNAKE[0][1]){
